@@ -12,4 +12,13 @@ export const getProducts = async (): Promise<Product[]> => {
   }
 };
 
-// export const getProduct = async (id) => {};
+export const getProduct = async (id: number): Promise<Product> => {
+  try {
+    const response = await axiosIntance.get(`/products/${id}`);
+    const data: Product = response.data;
+    return data;
+  } catch (error) {
+    console.log(error);
+    return {} as Product;
+  }
+};

@@ -7,9 +7,7 @@ const CardProduct: React.FC<CardProductProps> = ({ product }) => {
     <article className={styles.mainContainer}>
       <img className={styles.img} src={product.image_url} alt={product.name} />
       <h3>{product.name}</h3>
-      <p>{product.description}</p>
       <p>{product.price}</p>
-      <p>{product.stock}</p>
     </article>
   );
 };
